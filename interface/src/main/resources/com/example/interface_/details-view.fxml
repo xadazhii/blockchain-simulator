@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15" prefWidth="600.0" styleClass="sidebar" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.interface_.DetailsController">
+    <padding><Insets top="15" right="20" bottom="20" left="20" /></padding>
+    <Label fx:id="titleLabel" text="Step Details" styleClass="header"/>
+    <GridPane fx:id="detailsGrid" hgap="10" vgap="8">
+    </GridPane>
+</VBox>
