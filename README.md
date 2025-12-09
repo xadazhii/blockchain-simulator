@@ -20,6 +20,9 @@ Unlike static diagrams, this simulator performs actual mining using **SHA-256** 
 
 <img width="1388" height="880" alt="Screenshot 2025-12-09 at 21 58 51" src="https://github.com/user-attachments/assets/189cffb1-2073-41ce-8459-027cc0d7e129" />
 
+
+
+
 <img width="1386" height="510" alt="Screenshot 2025-12-09 at 22 23 28" src="https://github.com/user-attachments/assets/27fe0ef6-78cb-404d-81f0-1586825e7872" />
 
 ---
