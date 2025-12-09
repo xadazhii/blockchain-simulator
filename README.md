@@ -1,10 +1,10 @@
-# 🔗 Blockchain Simulator (JavaFX)
+# Blockchain Simulator
 
 **Blockchain Simulator** is an educational desktop application built with **Java** and **JavaFX**. It visualizes the internal workings of a blockchain in real-time, demonstrating cryptographic principles, transaction lifecycles, and the **Proof of Work (PoW)** consensus algorithm.
 
 Unlike static diagrams, this simulator performs actual mining using **SHA-256** hashing and secures transactions with **ECDSA** signatures.
 
-### ⛓️ **Table of Contents**
+### **Table of Contents**
 - [Visual Overview](#-visual-overview)
 - [Project Structure](#project-structure)
 - [Key Features](#key-features)
@@ -14,7 +14,7 @@ Unlike static diagrams, this simulator performs actual mining using **SHA-256** 
 
 ---
 
-## **📸 Visual Overview**
+## **Visual Overview**
 
 > *See the simulator in action: creating transactions and mining blocks.*
 
@@ -50,18 +50,15 @@ blockchain-simulator/
 
 ```
 
-* **⚡ Real-Time Mining:** Watch the `Nonce` update live as the miner solves the cryptographic puzzle.
-* **🔐 Digital Signatures:** Simulates "Alice" and "Bob" wallets. Every transaction is signed with a Private Key and verified with a Public Key.
-* **🔍 Block Inspection:** Drill down into mined blocks to view hashes, timestamps, and transaction data.
-* **🪜 Step-by-Step UI:** The interface breaks the lifecycle into 7 stages: *Request → Create → Broadcast → Validate → Reward → Add → Complete*.
+* ** Real-Time Mining:** Watch the `Nonce` update live as the miner solves the cryptographic puzzle.
+* ** Digital Signatures:** Simulates "Alice" and "Bob" wallets. Every transaction is signed with a Private Key and verified with a Public Key.
+* ** Block Inspection:** Drill down into mined blocks to view hashes, timestamps, and transaction data.
+* ** Step-by-Step UI:** The interface breaks the lifecycle into 7 stages: *Request → Create → Broadcast → Validate → Reward → Add → Complete*.
 
 ## How It Works
 
 ### 1. The Consensus (Proof of Work)
 The simulator mimics Bitcoin's mining process. A `Miner` must find a hash for the block that starts with a specific number of zeros (Difficulty). 
-
-[Image of blockchain proof of work consensus diagram]
-
 
 > **Logic:** `SHA-256(PrevHash + Data + Timestamp + Nonce) < Target`
 
@@ -99,4 +96,5 @@ Mining is computationally intensive. The application uses `ExecutorService` to r
     ```
 
 ---
-**License:** Educational Use / MIT
+**License:** This project is owned by *Adazhii Kristina*.
+
