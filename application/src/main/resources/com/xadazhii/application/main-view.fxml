@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="750.0" prefWidth="1200.0" styleClass="root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xadazhii.application.Controller">
+
+    <left>
+        <VBox spacing="15" prefWidth="350.0" styleClass="sidebar">
+            <padding><Insets top="15" right="15" bottom="15" left="15" /></padding>
+            <Label text="Wallets &amp; Actions" styleClass="header"/>
+            <ListView fx:id="walletsListView" prefHeight="100.0"/>
+            <Label text="Create Transaction" styleClass="header"/>
+            <GridPane hgap="10" vgap="10">
+                <Label text="From:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="senderComboBox" prefWidth="250" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="To:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="recipientComboBox" prefWidth="250" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Label text="Amount:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="amountField" promptText="e.g., 10" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <Button fx:id="sendButton" text="1. Request Transaction" maxWidth="Infinity" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <VBox spacing="10">
+                <padding><Insets top="20.0" /></padding>
+                <Label text="Blockchain Actions" styleClass="header" />
+                <Button fx:id="viewChainButton" text="🔍 View Blockchain Explorer" maxWidth="Infinity" />
+            </VBox>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+            <padding><Insets top="15" right="15" bottom="15" left="15" /></padding>
+            <Label text="Transaction Lifecycle" styleClass="header-center"/>
+            <HBox alignment="CENTER" spacing="10">
+                <VBox fx:id="step1_Request" alignment="CENTER" spacing="8" styleClass="step-box"><Label text="💻" style="-fx-font-size:36;"/><Label text="Transaction Requested" wrapText="true"/></VBox>
+                <Label text="→" styleClass="arrow" />
+                <VBox fx:id="step2_CreateBlock" alignment="CENTER" spacing="8" styleClass="step-box"><Label text="📦" style="-fx-font-size:36;"/><Label text="Block Created" wrapText="true"/></VBox>
+                <Label text="→" styleClass="arrow" />
+                <VBox fx:id="step3_Broadcast" alignment="CENTER" spacing="8" styleClass="step-box"><Label text="🌐" style="-fx-font-size:36;"/><Label text="Broadcast to Network" wrapText="true"/></VBox>
+                <Label text="→" styleClass="arrow" />
+                <VBox fx:id="step4_Validate" alignment="CENTER" spacing="8" styleClass="step-box">
+                    <Label text="✅" style="-fx-font-size:36;"/><Label text="Validation (PoW)" wrapText="true"/>
+                    <GridPane alignment="CENTER" hgap="5">
+                        <Label text="Nonce:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                        <Label fx:id="powNonceLabel" text="-" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                        <Label text="Hash:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                        <Label fx:id="powHashLabel" text="-" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-font-family: 'SF Mono';"/>
+                    </GridPane>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefWidth="690"><Label text="↓" styleClass="arrow" /></HBox>
+            <HBox alignment="CENTER" spacing="10">
+                <VBox fx:id="step7_Complete" alignment="CENTER" spacing="8" styleClass="step-box"><Label text="✔️" style="-fx-font-size:36;"/><Label text="Transaction Complete" wrapText="true"/></VBox>
+                <Label text="←" styleClass="arrow" />
+                <VBox fx:id="step6_AddBlock" alignment="CENTER" spacing="8" styleClass="step-box"><Label text="🔗" style="-fx-font-size:36;"/><Label text="Added to Blockchain" wrapText="true"/></VBox>
+                <Label text="←" styleClass="arrow" />
+                <VBox fx:id="step5_Reward" alignment="CENTER" spacing="8" styleClass="step-box"><Label text="⛏️" style="-fx-font-size:36;"/><Label text="Miner Reward" wrapText="true"/></VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+    <right>
+        <VBox spacing="10" prefWidth="350.0" styleClass="sidebar">
+            <padding><Insets top="15" right="15" bottom="15" left="15" /></padding>
+            <Label text="Pending Transactions" styleClass="header"/>
+            <ListView fx:id="pendingTxListView" VBox.vgrow="ALWAYS"/>
+            <Label text="Log" styleClass="header"/>
+            <TextArea fx:id="logArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </right>
+</BorderPane>
