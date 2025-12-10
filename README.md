@@ -50,9 +50,9 @@ blockchain-simulator/
 │   └── pom.xml
 └── pom.xml                       # Parent POM
 
-## Key Features
-
 ```
+
+## Key Features
 
 * ** Real-Time Mining:** Watch the `Nonce` update live as the miner solves the cryptographic puzzle.
 * ** Digital Signatures:** Simulates "Alice" and "Bob" wallets. Every transaction is signed with a Private Key and verified with a Public Key.
@@ -84,7 +84,7 @@ Mining is computationally intensive. The application uses `ExecutorService` to r
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/blockchain-simulator.git](https://github.com/your-username/blockchain-simulator.git)
+    git clone git@github.com:xadazhii/blockchain-simulator.git
     ```
 
 2.  **Build the project:**
