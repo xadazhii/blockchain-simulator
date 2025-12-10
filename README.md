@@ -54,10 +54,10 @@ blockchain-simulator/
 
 ## Key Features
 
-* ** Real-Time Mining:** Watch the `Nonce` update live as the miner solves the cryptographic puzzle.
-* ** Digital Signatures:** Simulates "Alice" and "Bob" wallets. Every transaction is signed with a Private Key and verified with a Public Key.
-* ** Block Inspection:** Drill down into mined blocks to view hashes, timestamps, and transaction data.
-* ** Step-by-Step UI:** The interface breaks the lifecycle into 7 stages: *Request → Create → Broadcast → Validate → Reward → Add → Complete*.
+* **Real-Time Mining:** Watch the `Nonce` update live as the miner solves the cryptographic puzzle.
+* **Digital Signatures:** Simulates "Alice" and "Bob" wallets. Every transaction is signed with a Private Key and verified with a Public Key.
+* **Block Inspection:** Drill down into mined blocks to view hashes, timestamps, and transaction data.
+* **Step-by-Step UI:** The interface breaks the lifecycle into 7 stages: *Request → Create → Broadcast → Validate → Reward → Add → Complete*.
 
 ## How It Works
 
